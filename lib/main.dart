@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'const.dart';
 
 void main() {
   runApp(Planner());
@@ -10,8 +11,7 @@ class Planner extends StatelessWidget {
     return MaterialApp(
       title: 'PlannerApp',
       theme: ThemeData(
-        primarySwatch: Colors.black,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        backgroundColor: mainColor,
       ),
       home: MyHomePage(title: 'Planner App'),
     );
@@ -31,15 +31,14 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
+      backgroundColor: mainColor,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'This is Planner App',
+              'This is Planner App!',
+              style: titleTextStyle,
             ),
           ],
         ),
